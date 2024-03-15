@@ -55,6 +55,9 @@ void loop() {
   Mldr=map(Vldr, 54, 974, 0, 5);
   Serial.print("LDR"), Serial.println(Mldr);
   //Segun o valor asignaselle un valor analógico ao PIN 9.
+  if(Mldr == 0){
+    analogWrite(PWM, 13);
+  }
   if(Mldr == 1){
     analogWrite(PWM, 51);
   }
